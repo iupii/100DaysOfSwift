@@ -11,6 +11,4 @@ import UIKit
 class FlagViewCell: UITableViewCell {
     @IBOutlet var flagImageView: UIImageView!
     @IBOutlet var flagTextLabel: UILabel!
-    //    @IBOutlet var flagImageView: UIImageView!
-//    @IBOutlet var flagTextLabel: UILabel!
 }
