@@ -20,20 +20,20 @@ class ViewController: UITableViewController {
             self.image3x = image3x
         }
     }
-    
+
     var flags = [Flag]()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
-        
+
         var f2x = [String: String]()
         var f3x = [String: String]()
-        
+
         for item in items {
             let country = String(item.dropLast(7))
             let suffix = item.suffix(7)
@@ -65,7 +65,7 @@ class ViewController: UITableViewController {
         cell.flagImageView?.layer.cornerRadius = 5
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             let flag = self.flags[indexPath.row]
